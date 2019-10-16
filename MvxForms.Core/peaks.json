@@ -1,0 +1,70 @@
+{
+  "peaks": [
+    {
+      "name": "Rysy",
+      "mountainrange": "Tatry Wysokie",
+      "height": "2499",
+      "image": "https://8a.pl/8academy/wp-content/uploads/2017/10/Rysy-szczyt.jpg"
+    },
+    {
+      "name": "Śnieżka",
+      "mountainrange": "Karkonosze",
+      "height": "1602",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/sniezka.JPG"
+    },
+    {
+      "name": "Babia Góra",
+      "mountainrange": "Beskid Żywiecki",
+      "height": "1723",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/P6140036.JPG"
+    },
+    {
+      "name": "Pilsko",
+      "mountainrange": "Beskid Żywiecki",
+      "height": "1557",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Wsch%C3%B3d_na_Pilsku.JPG"
+    },
+    {
+      "name": "Śnieżnik",
+      "mountainrange": "Masyw Śnieżnika",
+      "height": "1426",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/P1670864.JPG"
+    },
+    {
+      "name": "Turbacz",
+      "mountainrange": "Gorce",
+      "height": "1315",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Turbacz_-_panoramio.JPG"
+    },
+    {
+      "name": "Skrzyczne",
+      "mountainrange": "Beskid Śląski",
+      "height": "1257",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Jezioro_%C5%BBywieckie_i_Skrzyczne.JPG"
+    },
+    {
+      "name": "Wielka Sowa",
+      "mountainrange": "Góry Sowie",
+      "height": "1017",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/P6070118.JPG"
+    },
+    {
+      "name": "Radziejowa",
+      "mountainrange": "Beskid Sądecki",
+      "height": "1262",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Radziejowa_seen_from_Ma%C5%82y_Rogacz.JPG"
+    },
+    {
+      "name": "Luboń Wielki",
+      "mountainrange": "Beskid Wyspowy",
+      "height": "1022",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Lubon_Wielki_z_Tatarowa_%28i_Krolewska_Gora%29.JPG"
+    },
+    {
+      "name": "Wielka Rawka",
+      "mountainrange": "Bieszczady",
+      "height": "1304",
+      "image": "https://www.ciekawe-miejsca.net/pliki/uploads/Bieszczady-Wielka_Rawka.JPG"
+    }
+  ]
+}

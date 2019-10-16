@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<d:MvxContentPage
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+    x:TypeArguments="viewModels:MvxListViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvxForms.Core.Views"
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="White"
+    x:Class="MvxForms.Core.Views.MvxListPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Margin="10" Text="Wykaz polskich szczytów" FontSize="25" />
+                <ListView x:Name="listViewPeaks" Grid.Row="1" HorizontalOptions="FillAndExpand" Footer="" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid HorizontalOptions="FillAndExpand" Padding="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Name}" HorizontalOptions="StartAndExpand" Grid.Row="0" TextColor="Black" FontSize="Medium"  FontAttributes="Bold"/>
+                                    <Label Text="{Binding MountainRange}" HorizontalOptions="StartAndExpand" Grid.Row="1"  FontSize="Medium" TextColor="Blue"  FontAttributes="Bold"/>
+                                    <Label HorizontalOptions="StartAndExpand" Grid.Row="2" FontSize="Small"  FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Height}" TextColor="Red" />
+                                                <Span Text=" m n.p.m." TextColor="Red" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <ff:CachedImage 
+                                        Grid.Row="3"
+                                        Margin="0"
+                                        Grid.Column="0"
+                                        Source="{Binding Image}"
+                                        ErrorPlaceholder="defaultIcon.png"
+                                        DownsampleToViewSize="true"
+                                        WidthRequest="300"
+                                        HeightRequest="300">
+                                    </ff:CachedImage>
+                                </Grid>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</d:MvxContentPage>

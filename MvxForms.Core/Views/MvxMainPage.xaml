@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:MvxContentPage
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+    x:TypeArguments="viewModels:MvxMainViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvxForms.Core.Views"
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="White"
+    x:Class="MvxForms.Core.Views.MvxMainPage">
+    <ContentPage.Content>
+        <Grid
+            Margin ="0"
+            Padding="0"
+            RowSpacing="0">
+            <Image
+                Source="Background.jpg" 
+                Aspect="AspectFill"/>
+
+            <Grid
+                Margin="0"
+                Padding="50,0"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <StackLayout
+                    Grid.Row="1">
+                    <Image
+                    Source="home.png" 
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdGoToWelcomeModule}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Row="3">
+                    <Image
+                    Source="peak.png" 
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdGoToListOfPeaks}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Row="5">
+                    <Image
+                    Source="info.png" 
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdShowInfo}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</d:MvxContentPage>

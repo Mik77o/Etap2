@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<d:MvxContentPage
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:TypeArguments="viewModels:MvxCarouselViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvxForms.Core.Views"
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels"
+    xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="White"
+    x:Class="MvxForms.Core.Views.MvxCarouselPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="0.5" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ContentView Grid.Row="0">
+                <controls:CarouselViewControl ItemsSource="{Binding Slides}"
+                                          ShowIndicators="True"
+                                          ShowArrows="False"
+                                          IndicatorsTintColor="Blue"
+                                          CurrentPageIndicatorTintColor="Green">
+                    <controls:CarouselViewControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <ContentView Grid.Row="0" Padding="5">
+                                    <Image Source="{Binding Image}" Aspect="AspectFit" />
+                                </ContentView>
+
+                                <ContentView Grid.Row="1" Padding="40">
+                                    <Label Text="{Binding Description}"
+                                       HorizontalTextAlignment="Center" />
+                                </ContentView>
+
+                            </Grid>
+                        </DataTemplate>
+                    </controls:CarouselViewControl.ItemTemplate>
+                </controls:CarouselViewControl>
+            </ContentView>
+
+            <BoxView Grid.Row="1" BackgroundColor="Black" />
+
+            <StackLayout Grid.Row="2" Padding="0,0,0,10">
+                <Image
+                    Source="enter.png" 
+                    HeightRequest="70"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdGoToMain}" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</d:MvxContentPage>
